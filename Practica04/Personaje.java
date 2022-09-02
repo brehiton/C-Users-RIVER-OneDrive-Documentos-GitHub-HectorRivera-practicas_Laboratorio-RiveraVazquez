@@ -1,11 +1,10 @@
-//practica03
 public class Personaje{
 	private String nombre;
 	private int edad;
 
-	public Persona(String nombre, int edad){
+	public Personaje(String nombre){
 		this.nombre = nombre;
-		this.edad = edad = 0;
+		this.edad = edad;
 	}
 	public int getEdad(){
 		return edad;
@@ -22,9 +21,10 @@ public class Personaje{
 	}
 	public boolean setEdad(int years){
 		boolean result = false;
-		//valido 1 a 120
 		if (years > 0 && years <121 ){
 			edad = years;
 			result = true;
 		}
+		return result;
+	}
 }
