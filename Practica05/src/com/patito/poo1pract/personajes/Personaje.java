@@ -1,3 +1,5 @@
+package com.patito.poo1pract.personajes;
+
 public class Personaje{
 	private String nombre;
 	private int edad;
