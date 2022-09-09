@@ -4,7 +4,7 @@ public class Personaje{
 	private String nombre;
 	private int edad;
 
-	public Personaje(String nombre){
+	public Personaje(String nombre, int edad){
 		this.nombre = nombre;
 		this.edad = 0;
 	}
@@ -12,9 +12,10 @@ public class Personaje{
 		return edad;
 	}
 
-	public void setNombre(String nombre, int edad){
-		this.nombre = nombre;
-		if (nombre.length() > 5 && nombre.length() <= 25);
+	public void setNombre(String nombre){
+		if (nombre.length() > 5 && nombre.length() <= 25){
+			this.nombre = nombre;
+		}
 		System.out.println(nombre.length());
 	}
 
