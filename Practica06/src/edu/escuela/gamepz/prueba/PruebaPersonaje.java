@@ -1,5 +1,5 @@
-package com.patito.poo1pract.prueba;
-import com.patito.poo1pract.personajes.*;
+package edu.escuela.gamepz.prueba;
+import edu.escuela.gamepz.personajes.*;
 
 public class PruebaPersonaje{
 	public static void main(String[] args){
