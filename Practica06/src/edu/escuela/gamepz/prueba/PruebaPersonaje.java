@@ -10,11 +10,11 @@ public class PruebaPersonaje{
 	alumno.setNombre("Michael jordan");
 	alumno.saludar();
 	//modificando
-	Personaje per01 = new Personaje("Almendra",200)
-	Personaje per01 = new Personaje("Ricardo",10)
-	Personaje per01 = new Personaje("Bianca",1)
-	Personaje per01 = new Personaje("Leonel",-10)
-	Personaje per01 = new Personaje("Hector",500)
+	Personaje per01 = new Personaje("Almendra",200);
+	Personaje per02 = new Personaje("Ricardo",10);
+	Personaje per03 = new Personaje("Bianca",1);
+	Personaje per04 = new Personaje("Leonel",-10);
+	Personaje per05 = new Personaje("Hector",500);
 	System.out.println();
 	if (!alumno.setEdad(30)){
 		System.out.println("Edad sin cambios");
