@@ -15,7 +15,11 @@ public class PruebaPersonaje{
 	Personaje per03 = new Personaje("Bianca",1);
 	Personaje per04 = new Personaje("Leonel",-10);
 	Personaje per05 = new Personaje("Hector",500);
-	System.out.println();
+	System.out.println(per01.getDetalle());
+	System.out.println(per02.getDetalle());
+	System.out.println(per03.getDetalle());
+	System.out.println(per04.getDetalle());
+	System.out.println(per05.getDetalle());
 	if (!alumno.setEdad(30)){
 		System.out.println("Edad sin cambios");
 		}
