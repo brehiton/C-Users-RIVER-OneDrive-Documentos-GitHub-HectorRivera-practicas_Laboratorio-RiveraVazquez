@@ -6,7 +6,7 @@ public class PruebaCiclos{
 		Personaje per01 = new Personaje("Diego");
 		Personaje per02 = new Personaje("Almendra");
 		Personaje per03 = new Personaje("Bianca");
-		Personaje pero04 = new Personaje("Jordan");
+		Personaje per04 = new Personaje("Jordan");
 
 		
 
@@ -24,21 +24,21 @@ public class PruebaCiclos{
 				System.out.println(per01.getDetalle()+" Se modifico la edad");
 			}
 			else{
-				System.out.println(per01.getDetalle()+"Sin modificacion en edad a "+ed);
+				System.out.println(per01.getDetalle()+" Sin modificacion en edad a "+ed);
 			}
 			ed = (int)(Math.random()*250);
 			if(per02.setEdad(ed)){
 				System.out.println(per02.getDetalle()+" Se modifico la edad");
 			}
 			else{
-				System.out.println(per02.getDetalle()+"Sin modificacion en edad a "+ed);
+				System.out.println(per02.getDetalle()+"  modificacion en edad a "+ed);
 			}
 			ed = (int)(Math.random()*250);
 			if(per03.setEdad(ed)){
 				System.out.println(per03.getDetalle()+" Se modifico la edad");
 			}
 			else{
-				System.out.println(per03.getDetalle()+"Sin modificacion en edad a "+ed);
+				System.out.println(per03.getDetalle()+" Sin modificacion en edad a "+ed);
 
 			}
 			do{
@@ -47,9 +47,9 @@ public class PruebaCiclos{
 					if(ed>150){
 						System.out.println("El numero generado es mayor a 150");
 						continue outfor;
-
 					}
-			}while
+			}while(per04.setEdad(ed));
+				System.out.println(per04.getDetalle());
 
 		}
 	}
