@@ -48,7 +48,7 @@ public class PruebaCiclos{
 						System.out.println("El numero generado es mayor a 150");
 						continue outfor;
 					}
-			}while(per04.setEdad(ed));
+			}while(!per04.setEdad(ed));
 				System.out.println(per04.getDetalle());
 
 		}
