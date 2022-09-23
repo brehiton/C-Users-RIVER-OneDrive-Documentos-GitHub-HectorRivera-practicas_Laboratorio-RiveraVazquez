@@ -8,6 +8,8 @@ public class PruebaCiclos{
 		Personaje per03 = new Personaje("Bianca");
 		Personaje pero04 = new Personaje("Jordan");
 
+		
+
 		int n = 0;
 		int m = 0;
 		while (n >= m){
@@ -15,9 +17,9 @@ public class PruebaCiclos{
 			m = (int)(Math.random()*100);
 		}
 		System.out.println("n = "+n +" "+"m="+ m);
-		for ( int i = 0; i<n  ; i++ ) {
+		for ( int i = n; i<=n ; i++ ) {
 			per01.setEdad(((int)(Math.random()*250)));
-			System.out.println(per01.setNombre() +" Se modifico la edad");
+			System.out.println(per01.getDetalle()+" Se modifico la edad");
 
 		}
 	}
