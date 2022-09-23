@@ -15,5 +15,8 @@ public class PruebaCiclos{
 			m = (int)(Math.random()*100);
 		}
 		System.out.println("n = "+n +" "+"m="+ m);
+		for (; ; ) {
+			
+		}
 	}
 }
