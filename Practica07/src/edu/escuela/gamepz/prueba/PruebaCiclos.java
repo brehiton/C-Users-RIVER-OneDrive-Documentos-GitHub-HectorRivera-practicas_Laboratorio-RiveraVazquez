@@ -15,8 +15,10 @@ public class PruebaCiclos{
 			m = (int)(Math.random()*100);
 		}
 		System.out.println("n = "+n +" "+"m="+ m);
-		for (; ; ) {
-			
+		for ( int i = 0; i<n  ; i++ ) {
+			per01.setEdad(((int)(Math.random()*250)));
+			System.out.println(per01.setNombre() +" Se modifico la edad");
+
 		}
 	}
 }
