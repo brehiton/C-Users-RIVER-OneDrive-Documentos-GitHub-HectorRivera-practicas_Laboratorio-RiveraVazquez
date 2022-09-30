@@ -1,12 +1,14 @@
+package mx.parc1.soft.parcial.pruebas;
+import mx.parc1.soft.parcial.series.*;
 public class TestSeries {
 
     public static void main(String[] args) {
 
-        Serie s = new Serie();
+        Serie s = new Serie(18);
 
         int m = s.genNumero(100);
 
-        s.primos(m);
+        s.primos(3);
 
         //int o = s.primoN(m/10);
 
