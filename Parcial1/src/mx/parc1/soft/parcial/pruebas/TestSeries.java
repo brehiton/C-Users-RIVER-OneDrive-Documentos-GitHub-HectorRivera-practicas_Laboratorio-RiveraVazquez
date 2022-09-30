@@ -4,7 +4,7 @@ public class TestSeries {
 
     public static void main(String[] args) {
 
-        Serie s = new Serie(18);
+        Serie s = new Serie(3,4);
 
         int m = s.genNumero(100);
         System.out.println(s.primos(m));

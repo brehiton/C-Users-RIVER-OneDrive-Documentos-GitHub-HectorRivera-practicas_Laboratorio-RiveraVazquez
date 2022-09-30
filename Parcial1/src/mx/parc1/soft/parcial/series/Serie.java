@@ -7,11 +7,16 @@ public class Serie{
 		this.x = x;
 		this.y = y;
 	}
-	public int genNumero(){
+	
+	public int primos(){
 		int n = 0;
 		n = (int)(Math.random()*x*10);
-		System.out.println(n);
-		return x;
+		for (int i = 0; i > x ; i++ ) {
+			System.out.println(i);
+		}
+	}
+	public int genNumero(){
+		
 	}
 	
 }
