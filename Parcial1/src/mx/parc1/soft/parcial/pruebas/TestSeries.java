@@ -7,8 +7,8 @@ public class TestSeries {
         Serie s = new Serie(18);
 
         int m = s.genNumero(100);
-
-        s.primos(3);
+        System.out.println(s.primos(m));
+        
 
         //int o = s.primoN(m/10);
 

@@ -5,12 +5,16 @@ public class Serie{
 	public Serie(int primos){
 		this.primos = primos;
 	}
-
+	
 	public int primos(){
 		return primos;
-
 	}
+	
 	public int genNumero(){
-		return primos;
+		int x = 0;
+		int y = 0;
+		for (int i = x; x < y ; i++ ) {
+			
+		}
 	}
 }
