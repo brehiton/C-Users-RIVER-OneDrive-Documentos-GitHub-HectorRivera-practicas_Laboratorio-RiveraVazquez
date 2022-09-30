@@ -5,16 +5,4 @@ public class Serie{
 	public Serie(int primos){
 		this.primos = primos;
 	}
-	
-	public boolean getPrimos(int numeros){
-		boolean result = false;
-		if (numeros > 0 && numeros <100){
-			primos = numeros; 
-			result = true;
-		}
-		return result;
-	}
-	public int genNumero(){
-		
-	}
 }
