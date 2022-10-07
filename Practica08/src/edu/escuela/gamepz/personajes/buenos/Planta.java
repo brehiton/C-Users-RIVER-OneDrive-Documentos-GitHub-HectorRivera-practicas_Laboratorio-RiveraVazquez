@@ -25,7 +25,7 @@ public class Planta extends Personaje{
 	}
 
 	public String getDetalle(){
-		super.getDetalle(); 
+		return super.getDetalle() + escudo; 
 	}
 
 	public void decVida(){
@@ -34,6 +34,6 @@ public class Planta extends Personaje{
 
 	public void decVida(int resta){
 		resta = (int)(Math.random()*99);
-		vida -= resta;
+		return super.decVida() -= resta;
 	}
 }
