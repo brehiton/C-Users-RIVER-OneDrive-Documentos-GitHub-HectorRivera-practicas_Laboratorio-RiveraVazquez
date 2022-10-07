@@ -33,7 +33,18 @@ public class Planta extends Personaje{
 	}
 
 	public void decVida(int resta){
-		resta = (int)(Math.random()*99);
-		return super.decVida() -= resta;
+		super.decVida(resta);
+		if (escudo == 'A'){
+			resta *= 2;
+		}
+	}
+	public void addVida(){
+		super.addVida();
+	}
+	public void addVida(int suma){
+		super.addVida(suma);
+		if (escudo == 'A'){
+			suma *=2;
+		}
 	}
 }
