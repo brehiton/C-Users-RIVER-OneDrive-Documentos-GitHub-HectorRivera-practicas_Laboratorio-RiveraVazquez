@@ -24,12 +24,12 @@ public class Planta extends Personaje{
 		return escudo;
 	}
 
-	public char getDetalle(){
-		return nombre + "\t" + vida; 
+	public String getDetalle(){
+		super.getDetalle(); 
 	}
 
 	public void decVida(){
-		vida * 2;
+		super.decVida() *= 2;
 	}
 
 	public void decVida(int resta){
