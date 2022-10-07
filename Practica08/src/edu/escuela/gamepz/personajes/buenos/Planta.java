@@ -29,7 +29,7 @@ public class Planta extends Personaje{
 	}
 
 	public void decVida(){
-		super.decVida() *= 2;
+		super.decVida();
 	}
 
 	public void decVida(int resta){
