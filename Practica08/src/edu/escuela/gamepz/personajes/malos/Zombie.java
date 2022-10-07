@@ -15,9 +15,10 @@ public class Zombie extends Personaje{
 	}
 
 	public boolean ataque(){
-
+		return ataque
 	}
 	public String getDetalle(){
 		super.getDetalle() + ataque;
 	}
+
 }
