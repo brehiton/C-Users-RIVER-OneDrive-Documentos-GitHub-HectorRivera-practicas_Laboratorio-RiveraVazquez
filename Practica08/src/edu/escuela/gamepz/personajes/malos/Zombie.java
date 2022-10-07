@@ -11,14 +11,35 @@ public class Zombie extends Personaje{
 	}
 
 	public Zombie(String nombre){
-		this(nombre, 3, false)
+		this(nombre, 3, false);
 	}
 
 	public boolean ataque(){
-		return ataque
+		return ataque;
 	}
 	public String getDetalle(){
-		super.getDetalle() + ataque;
+		return super.getDetalle() + ataque;
+	}
+	public void decVida(){
+		super.decVida();
+	}
+	public void decVida(int resta){
+		super.decVida(resta);
+		if (ataque == false){
+			resta *= 3;
+		}else{
+			resta *=2;
+		}
+	}
+
+	public void addVida(){
+		super.addVida();
+	}
+	public void addVida(int suma){
+		super.addVida(suma);
+		if (ataque == true){
+			suma *=2;
+		}
 	}
 
 }
