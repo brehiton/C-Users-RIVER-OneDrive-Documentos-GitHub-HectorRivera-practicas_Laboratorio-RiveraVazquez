@@ -4,9 +4,14 @@ public class Personaje{
 	private String nombre;
 	private int vida;
 
-	public Personaje(String nombre){
+	public Personaje(String nombre, int vida){
 		this.nombre = nombre;
 		//setEdad(edad);
+
+	}
+
+	public Personaje(String nombre){
+		this(nombre, 3);
 
 	}
 	public int getVida(){
@@ -28,7 +33,7 @@ public class Personaje{
 	}
 	public boolean setVida(int years){
 		boolean result = false;
-		if (years > 0 && years <121 ){
+		if (years > 0 && years < 99 ){
 			vida = years;
 			result = true;
 		}
