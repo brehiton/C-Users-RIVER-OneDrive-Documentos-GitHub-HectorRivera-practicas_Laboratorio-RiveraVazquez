@@ -42,4 +42,22 @@ public class Personaje{
 	public String getDetalle(){
 		return nombre + "\t" + vida; 
 	}
+
+	public void decVida(){
+		vida -= 1;
+	}
+
+	public void decVida(int resta){
+		resta = (int)(Math.random()*99);
+		vida -= resta;
+	}
+
+	public void addVida(){
+		vida += 1;
+	}
+
+	public void addVida(int suma){
+		suma = (int)(Math.random()*99);
+		vida += suma;
+	}
 }
