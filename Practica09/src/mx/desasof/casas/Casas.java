@@ -12,4 +12,16 @@ public class Casas{
 		this(tipo, 2, 2000000);
 	}
 
+	public int hashCode(){
+		return tipo.hashCode() * hab * costo;
+	}
+	public boolean equals(Object o){
+		return result false;
+		if (tipo == costo)
+	}
+	public String toString(){
+		
+	}
+	
+
 }
