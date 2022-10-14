@@ -13,14 +13,16 @@ public class Casas{
 	}
 
 	public int hashCode(){
-		return tipo.hashCode() * hab * costo;
+		return tipo.hashCode() * hab * 2000000;
 	}
 	public boolean equals(Object o){
-		return result false;
-		if (tipo == costo)
+		if (tipo.equals(tipo) && costo == costo){
+
+		}
+		return true;
 	}
 	public String toString(){
-		
+		return tipo + "\t" + hab + "\t" + costo;
 	}
 	
 
