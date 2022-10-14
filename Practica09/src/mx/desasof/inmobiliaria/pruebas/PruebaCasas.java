@@ -28,8 +28,6 @@ public class PruebaCasas{
 				}
 					System.out.println(c+"Son Diferentes "+ casas[i]);
 					System.out.println("! ! ! ! !");
-				// for
-				i++;
 			}// for
 				i++;
 		}// while
