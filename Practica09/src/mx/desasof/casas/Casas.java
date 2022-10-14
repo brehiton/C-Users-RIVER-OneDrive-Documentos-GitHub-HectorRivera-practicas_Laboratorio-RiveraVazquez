@@ -9,13 +9,14 @@ public class Casas{
 		this.costo = costo;
 	}
 	public Casas(String tipo, int hab){
-		this(tipo, 2, 2000000);
+		this(tipo, 2, 2000000f);
 	}
 
 	public int hashCode(){
-		return tipo.hashCode() * hab * 2000000;
+		return tipo.hashCode() * hab * 2000000f;
 	}
 	public boolean equals(Object o){
+		Casas c = (Casas)o;
 		if (tipo.equals(tipo) && costo == costo){
 
 		}
