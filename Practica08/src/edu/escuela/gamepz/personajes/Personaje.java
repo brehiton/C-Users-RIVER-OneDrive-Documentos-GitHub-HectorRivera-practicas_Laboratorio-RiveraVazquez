@@ -1,4 +1,7 @@
 package edu.escuela.gamepz.personajes;
+import edu.escuela.gamepz.personajes.Personaje;
+import edu.escuela.gamepz.personajes.buenos.Planta;
+import edu.escuela.gamepz.personajes.malos.Zombi;
 
 public class Personaje{
 	private String nombre;
@@ -33,7 +36,7 @@ public class Personaje{
 	}
 	public boolean setVida(int years){
 		boolean result = false;
-		if (years > 0 && years < 99 ){
+		if (years >= 0 && years <= 98 ){
 			vida = years;
 			result = true;
 		}
@@ -45,11 +48,13 @@ public class Personaje{
 
 	public void decVida(){
 		vida -= 1;
+		//decVida(1);
 	}
 
-	public void decVida(int resta){
-		resta = (int)(Math.random()*99);
-		vida -= resta;
+	public void decVida(int vida){
+		if (this.vida - vida >= 0 && this.vida - vida <= 99){
+			this.vida -= vida;
+		}
 	}
 
 	public void addVida(){

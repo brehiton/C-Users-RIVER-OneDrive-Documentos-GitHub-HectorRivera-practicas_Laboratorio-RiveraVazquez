@@ -1,3 +1,5 @@
+package edu.escuela.gamepz.personajes.malos;
+import edu.escuela.gamepz.personajes.*;
 public class Zombie extends Personaje{
 	private boolean ataque;
 
@@ -23,22 +25,22 @@ public class Zombie extends Personaje{
 	public void decVida(){
 		super.decVida();
 	}
-	public void decVida(int resta){
-		super.decVida(resta);
+	public void decVida(int vida){
+		super.decVida(vida);
 		if (ataque == false){
-			resta *= 3;
+			vida *= 3;
 		}else{
-			resta *=2;
+			vida *=2;
 		}
 	}
 
 	public void addVida(){
 		super.addVida();
 	}
-	public void addVida(int suma){
-		super.addVida(suma);
+	public void addVida(int vida){
+		super.addVida(vida);
 		if (ataque == true){
-			suma *=2;
+			vida *=2;
 		}
 	}
 
