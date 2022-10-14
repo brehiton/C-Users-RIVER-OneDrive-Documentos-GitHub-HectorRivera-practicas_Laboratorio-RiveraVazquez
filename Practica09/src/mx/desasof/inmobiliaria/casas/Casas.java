@@ -14,7 +14,7 @@ public class Casas{
 	}
 
 	public int hashCode(){
-		return tipo.hashCode() * hab * 2000000f;
+		return tipo.hashCode() * hab * 2000000;
 	}
 	public boolean equals(Object o){
 		Casas c = (Casas)o;

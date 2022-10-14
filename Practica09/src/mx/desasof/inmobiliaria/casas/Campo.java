@@ -9,11 +9,6 @@ public class Campo extends Casas{
 		piscina[0] = ancho;
 		piscina[1] = largo;
 	}
-	public Campo(String tipo,float ancho, float largo){
-		super(tipo, 2, 2000000);
-		piscina[0] = ancho;
-		piscina[1] = largo;
-	}
 	public int hashCode(){
 		return (int)super.hashCode() * piscina[0] * piscina[1] / 5;
 	}
