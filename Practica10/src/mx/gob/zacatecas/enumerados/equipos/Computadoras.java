@@ -12,6 +12,7 @@ public class Computadoras{
 	}
 
 	public String toString(){
-		return tipo.getType() +"\t"+ memoria.getVel();
+		return marca+"\t"+ tipo.getType() +"\t"+ memoria.getTipo();
 	}
+
 }
