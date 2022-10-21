@@ -12,7 +12,7 @@ public class Computadoras{
 	}
 
 	public String toString(){
-		return marca+"\t"+ tipo.getType() +"\t"+ memoria.getTipo();
+		return marca+"\t"+ tipo.getType() +"\t"+ memoria.getTipo()+" "+memoria.getVel()+" "+memoria.getPines();
 	}
 
 }
