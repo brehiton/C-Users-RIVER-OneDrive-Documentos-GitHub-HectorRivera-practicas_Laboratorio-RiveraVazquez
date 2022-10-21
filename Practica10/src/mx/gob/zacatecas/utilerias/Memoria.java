@@ -8,9 +8,14 @@ public enum Memoria{
 	private String tipo;
 	private int vel;
 	private float pines;
+	public Memoria(String tipo, int vel, float pines){
+		this.tipo = tipo;
+		this.vel = vel;
+		this.pines = pines;
+	}
 
 	public int getDDR(){
-		return 1;
+		return ;
 	}
 	public int getDDR2(){
 		return 1;
