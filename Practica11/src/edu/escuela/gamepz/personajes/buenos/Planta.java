@@ -26,7 +26,7 @@ public class Planta extends Personaje{
 	}
 
 	public String toString(){
-		return this.toString() + Escudo.NULO; 
+		return nombre + vida + Escudo.NULO; 
 	}
 
 	public void decVida(){
