@@ -42,22 +42,15 @@ public abstract class Personaje{
 		}
 		return result;
 	}
-	public String getDetalle(){
+	public String toString(){
 		return nombre + "\t" + vida; 
 	}
 
 	public abstract void decVida();
 
-	public void decVida(int vida){
-		if (this.vida - vida >= 0 && this.vida - vida <= 99){
-			this.vida -= vida;
-		}
-	}
+	public abstract void decVida(int vida);
 
 	public abstract void addVida();
 
-	public void addVida(int suma){
-		suma = (int)(Math.random()*99);
-		vida += suma;
-	}
+	public abstract void addVida(int suma);
 }

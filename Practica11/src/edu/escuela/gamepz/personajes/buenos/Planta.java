@@ -30,33 +30,16 @@ public class Planta extends Personaje{
 	}
 
 	public void decVida(){
-		if (escudo == Escudo.NULO){
-			this.decVida(2);
-		} else {
-			this.decVida();
-		}
+		setVida(vida-escudo.getNivel());
 	}
 
 	public void decVida(int dec){
-		if (escudo == Escudo.NULO){
-			this.decVida(dec*2);
-		}
-		else {
-			this.decVida();
-		}
+		setVida(vida-escudo.getNivel()*dec);
 	}
 	public void addVida(){
-		if (escudo == Escudo.NULO){
-			this.addVida();
-		}
-		else{
-			this.decVida();
-		}
+		setVida(vida-escudo.getNivel());
 	}
-	public void addVida(int incvida, Escudo escudo){
-		this.addVida(incvida);
-		if (escudo == Escudo.NULO){
-			this.addVida((incvida *2) - (Escudo.NULO));
-		}
+	public void addVida(int incvida){
+		setVida(vida-escudo.getNivel()*incvida);
 	}
 }
