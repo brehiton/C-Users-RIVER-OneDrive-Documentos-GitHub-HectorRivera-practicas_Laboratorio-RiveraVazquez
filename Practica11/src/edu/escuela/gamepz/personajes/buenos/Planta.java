@@ -53,10 +53,10 @@ public class Planta extends Personaje{
 			this.decVida();
 		}
 	}
-	public void addVida(int incvida){
+	public void addVida(int incvida, Escudo escudo){
 		this.addVida(incvida);
 		if (escudo == Escudo.NULO){
-			this.addVida(incvida *2);
+			this.addVida((incvida *2) - (Escudo.NULO));
 		}
 	}
 }
