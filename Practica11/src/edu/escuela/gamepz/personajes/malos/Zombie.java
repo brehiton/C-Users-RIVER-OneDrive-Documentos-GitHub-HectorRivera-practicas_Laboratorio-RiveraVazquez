@@ -24,10 +24,10 @@ public class Zombie extends Personaje implements Muerto{
 		return this.toString() + ataque;
 	}
 	public void decVida(){
-		this.decVida();
+		decVida();
 	}
 	public void decVida(int vida){
-		this.decVida(vida);
+		decVida(vida);
 		if (ataque == false){
 			vida *= 3;
 		}else{
@@ -36,10 +36,10 @@ public class Zombie extends Personaje implements Muerto{
 	}
 
 	public void addVida(){
-		this.addVida();
+		addVida();
 	}
 	public void addVida(int vida){
-		this.addVida(vida);
+		addVida(vida);
 		if (ataque == true){
 			vida *=2;
 		}
