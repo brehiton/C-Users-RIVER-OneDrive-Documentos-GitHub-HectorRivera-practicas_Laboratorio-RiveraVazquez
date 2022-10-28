@@ -3,9 +3,9 @@ import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.*;
 import edu.escuela.gamepz.personajes.malos.*;
 
-public class Personaje{
-	private String nombre;
-	private int vida;
+public abstract class Personaje{
+	protected String nombre;
+	protected int vida;
 
 	public Personaje(String nombre, int vida){
 		this.nombre = nombre;
@@ -46,10 +46,7 @@ public class Personaje{
 		return nombre + "\t" + vida; 
 	}
 
-	public void decVida(){
-		vida -= 1;
-		//decVida(1);
-	}
+	public abstract void decVida();
 
 	public void decVida(int vida){
 		if (this.vida - vida >= 0 && this.vida - vida <= 99){
@@ -57,9 +54,7 @@ public class Personaje{
 		}
 	}
 
-	public void addVida(){
-		vida += 1;
-	}
+	public abstract void addVida();
 
 	public void addVida(int suma){
 		suma = (int)(Math.random()*99);

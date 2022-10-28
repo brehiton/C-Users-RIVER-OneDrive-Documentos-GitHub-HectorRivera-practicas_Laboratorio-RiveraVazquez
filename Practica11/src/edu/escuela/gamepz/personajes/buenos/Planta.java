@@ -1,60 +1,61 @@
 package edu.escuela.gamepz.personajes.buenos;
 import edu.escuela.gamepz.personajes.Personaje;
+import edu.escuela.gamepz.utils.*;
 public class Planta extends Personaje{
-	private char escudo;
+	private Escudo escudo;
 
-	public Planta(String nombre, int vida, char escudo){
+	public Planta(String nombre, int vida, Escudo escudo){
 		super(nombre, vida);
 		this.escudo = escudo;
 	}
 
-	public Planta(String nombre, char escudo){
+	public Planta(String nombre, Escudo escudo){
 		this(nombre, 3, escudo );
 	}
 
 	public Planta(String nombre, int vida){
-		this(nombre, vida, 'A' );
+		this(nombre, vida, Escudo.NULO );
 	}
 
 	public Planta(String nombre){
-		this(nombre, 3, 'A');
+		this(nombre, 3, Escudo.NULO);
 	}
 
-	public char escudo(){
+	public Escudo escudo(){
 		return escudo;
 	}
 
-	public String getDetalle(){
-		return super.getDetalle() + escudo; 
+	public String toString(){
+		return this.toString() + Escudo.NULO; 
 	}
 
 	public void decVida(){
-		if (escudo == 'A'){
-			super.decVida(2);
+		if (escudo == Escudo.NULO){
+			this.decVida(2);
 		} else {
-			super.decVida();
+			this.decVida();
 		}
 	}
 
 	public void decVida(int dec){
-		if (escudo == 'A'){
-			super.decVida(dec*2);
+		if (escudo == Escudo.NULO){
+			this.decVida(dec*2);
 		}
 		else {
-			super.decVida();
+			this.decVida();
 		}
 	}
 	public void addVida(){
-		if (escudo == 'A'){
-			super.addVida();
+		if (escudo == Escudo.NULO){
+			this.addVida();
 		}
 		else{
-			super.decVida();
+			this.decVida();
 		}
 	}
 	public void addVida(int incvida){
-		super.addVida(incvida);
-		if (escudo == 'A'){
+		this.addVida(incvida);
+		if (escudo == Escudo.NULO){
 			incvida *=2;
 		}
 	}
