@@ -18,6 +18,14 @@ public class Tablero{
 			}
 			count += 1;
 		}
+		System.out.println("Fin *** Contenido del arreglo en el Tablero\n");
+
+	}
+	public static int insertar(Personaje p, int pos) throws PersException{
+		if(pos < 0 || pos > MAX_SIZE){
+			throw PersException("Indice fuera de rango",pos);
+		}
+		personaje[pos] = p;
 
 	}
 }
