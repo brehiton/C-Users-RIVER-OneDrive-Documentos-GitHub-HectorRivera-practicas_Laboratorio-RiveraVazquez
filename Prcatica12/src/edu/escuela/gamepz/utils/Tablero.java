@@ -32,9 +32,9 @@ public class Tablero{
 	public static void borrar(int pos) throws PersException{
 		if (pos < 0 || pos >MAX_SIZE) {
 			throw new PersException("Indice fuera de rango",pos);
-			if (personajes == null){
-				throw new PersException("Si personaje para borrar",pos);
-			}
+		}
+		if (personajes == null){
+			throw new PersException("Si personaje para borrar",pos);
 		}
 		personajes[pos] = null;
 	}
