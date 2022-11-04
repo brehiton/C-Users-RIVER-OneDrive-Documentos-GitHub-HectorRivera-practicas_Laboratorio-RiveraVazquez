@@ -17,12 +17,17 @@ public class PruebaTablero{
 			new Zombie("Eduardo")};
 
 		for (Personaje tmp : datos ) {
-			int n = (Math.random()*20-5);
+			int n = (int)(Math.random()*20-5);
 			try{
 			Tablero.insertar(tmp,n);
-			} catch (PersExceptions e){
-				System.out.println(e.insertar(tmp,n));
+			} catch (PersException e){
+				System.out.println(e+" "+n);
 			}
 		}
+		Tablero.borrar();
+		for (i = 0; i < Tablero.MAX_SIZE;pos = (Math.random()*20-5)) 
+			System.out.println(pos.borrar());
+		}
+		
 	}
 }
