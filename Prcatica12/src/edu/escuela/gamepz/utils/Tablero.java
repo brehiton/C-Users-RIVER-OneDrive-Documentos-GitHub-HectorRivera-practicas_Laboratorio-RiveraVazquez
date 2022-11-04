@@ -6,8 +6,8 @@ public class Tablero{
 
 	private Tablero(){}
 
-	public void mostrar(){
-		int count = 1;
+	public static void mostrar(){
+		int count = 0;
 		System.out.println("\nlinicio *** Contenido del arreglo en Tablero");
 		for (Personaje tmp : personajes ) {
 			if(tmp == null ){

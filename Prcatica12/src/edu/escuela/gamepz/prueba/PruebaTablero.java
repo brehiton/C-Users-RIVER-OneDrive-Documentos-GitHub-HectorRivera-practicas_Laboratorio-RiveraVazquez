@@ -20,14 +20,19 @@ public class PruebaTablero{
 			int n = (int)(Math.random()*20-5);
 			try{
 			Tablero.insertar(tmp,n);
-			} catch (PersException e){
-				System.out.println(e+" "+n);
+			} catch (PersException pe){
+				System.out.println(pe+" "+n);
 			}
 		}
-		Tablero.borrar();
-		for (i = 0; i < Tablero.MAX_SIZE;pos = (Math.random()*20-5)) 
-			System.out.println(pos.borrar());
+		Tablero.mostrar();
+		for (int i = 0; i < Tablero.MAX_SIZE;i++){ 
+			int pos = (int)(Math.random()*20-5);
+			try{
+				Tablero.borrar(pos);
+			} catch (PersException e){
+				System.err.println(e.getMessage()+" "+e.getPos());
+			}
 		}
-		
+		Tablero.mostrar();
 	}
 }
