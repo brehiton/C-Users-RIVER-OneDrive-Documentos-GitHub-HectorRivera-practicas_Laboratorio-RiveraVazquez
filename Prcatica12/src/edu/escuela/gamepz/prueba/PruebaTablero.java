@@ -16,9 +16,13 @@ public class PruebaTablero{
 			new Zombie("Joselin", true),
 			new Zombie("Eduardo")};
 
-		for (Personaje p : datos ) {
-			double pos = (Math.random()*20-5);
-			Tablero.insertar(p,pos);
+		for (Personaje tmp : datos ) {
+			int n = (Math.random()*20-5);
+			try{
+			Tablero.insertar(tmp,n);
+			} catch (PersExceptions e){
+				System.out.println(e.insertar(tmp,n));
+			}
 		}
 	}
 }
