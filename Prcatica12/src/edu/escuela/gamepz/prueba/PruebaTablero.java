@@ -18,7 +18,7 @@ public class PruebaTablero{
 
 		for (Personaje p : datos ) {
 			double pos = (Math.random()*20-5);
-			System.out.println("");
+			Tablero.insertar(p,pos);
 		}
 	}
 }

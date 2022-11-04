@@ -1,6 +1,5 @@
 package edu.escuela.gamepz.utils;
 import edu.escuela.gamepz.personajes.*;
-import edu.escuela.gamepz.utils.*;
 public class Tablero{
 	public static int MAX_SIZE = 10;
 	public static Personaje[] personajes = new Personaje[MAX_SIZE];
