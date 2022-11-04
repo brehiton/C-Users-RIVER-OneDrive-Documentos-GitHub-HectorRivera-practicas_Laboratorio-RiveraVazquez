@@ -1,10 +1,16 @@
 package edu.escuela.gamepz.utils;
-
+import edu.escuela.gamepz.personajes.*;
 public class Tablero{
 	public static int MAX_SIZE = 10;
-	public static int PERSONAJE=MAX_SIZE;
+	 Personaje[] personajes = new Personaje[MAX_SIZE];
 
 	private Tablero(){}
 
-	public String mostrar()
+	public void mostrar(){
+		System.out.println("\nlinicio *** Contenido del arreglo en Tablero");
+		for (Personaje tmp : personajes ) {
+			System.out.println(tmp.Escudo.NULO+" ");
+		}
+
+	}
 }
