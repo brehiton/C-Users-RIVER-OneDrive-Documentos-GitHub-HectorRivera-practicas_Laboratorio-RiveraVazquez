@@ -10,6 +10,6 @@ public abstract class ByVida implements Comparator<Personaje>{
 		if (b1.getNombre() != b2.getNombre() ){
 			return (b1.getNombre().compareTo(b2.getNombre()));
 		}
-		return (b1.getSize()>b2.getSize()) ? -1 : 1 ;	
+		return (b2.getSize()<b1.getSize()) ? -1 : 1 ;	
 	}
 }
