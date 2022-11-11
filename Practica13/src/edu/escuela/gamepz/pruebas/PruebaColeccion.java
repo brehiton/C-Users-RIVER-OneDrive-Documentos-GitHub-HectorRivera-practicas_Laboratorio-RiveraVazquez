@@ -4,6 +4,8 @@ import edu.escuela.gamepz.personajes.buenos.Planta;
 import edu.escuela.gamepz.personajes.malos.Zombie;
 import edu.escuela.gamepz.utils.Escudo;
 import edu.escuela.gamepz.utils.Tablero;
+import java.util.TreeSet;
+import java.util.LinkedList;
 public class PruebaColeccion{
 	public static void main(String[] args) {
 		Personaje[] datos = {
@@ -18,6 +20,16 @@ public class PruebaColeccion{
 			new Zombie("Armando",Tablero.genVida())
 		};
 		for (Personaje tmp : datos) {
+			System.out.println(tmp);
+		}
+		TreeSet<Personaje> ts = new TreeSet<>();
+		ts.add(datos);
+		for (Personaje tmp : ts ) {
+			System.out.println(tmp);
+		}
+		LinkedList<Personaje> linked = new LinkedList<>();
+		linked.addAll(ts);
+		for (Personaje tmp : linked ) {
 			System.out.println(tmp);
 		}
 	}

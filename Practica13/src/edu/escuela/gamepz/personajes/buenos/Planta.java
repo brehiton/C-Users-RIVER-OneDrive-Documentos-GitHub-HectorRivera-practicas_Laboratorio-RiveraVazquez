@@ -5,22 +5,22 @@ import edu.escuela.gamepz.utils.Escudo;
 public class Planta extends Personaje{
 	private Escudo escudo;
 
-	public Planta(String nombre, int vida, float size, Escudo escudo){
-		super(nombre, vida, size);
+	public Planta(String nombre, int vida, Escudo escudo){
+		super(nombre, vida, 0.0f);
 		this.escudo = escudo;
 	}
 
 	public Planta(String nombre, Escudo escudo){
-		this(nombre, 3, 0.0f, escudo);
+		this(nombre, 3, escudo);
 
 	}
 
 	public Planta(String nombre, int vida){
-		this(nombre, vida, 0.0f, Escudo.NULO);
+		this(nombre, vida, Escudo.NULO);
 	}
 
 	public Planta(String nombre){
-		this(nombre, 3, 0.0f, Escudo.NULO);
+		this(nombre, 3, Escudo.NULO);
 
 	}
 
