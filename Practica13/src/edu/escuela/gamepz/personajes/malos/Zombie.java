@@ -6,19 +6,17 @@ import edu.escuela.gamepz.utils.Muerto;
 public class Zombie extends Personaje implements Muerto {
 	private boolean ataque;
 
-	public Zombie(String nombre, int vida, boolean ataque){
-		super(nombre,vida);
+	public Zombie(String nombre, int vida, float size, boolean ataque){
+		super(nombre,vida, size);
 		this.ataque = ataque;
 	}
 
 	public Zombie(String nombre, boolean ataque){
-		super(nombre, 3);
-		this.ataque = ataque;
+		this(nombre, 3, 0.0f, ataque);
 	}
 
 	public Zombie(String nombre){
-		super(nombre, 3);
-		ataque = false;
+		this(nombre, 3, 0.0f, false);
 	}
 
 	public boolean getAtaque(){
