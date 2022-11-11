@@ -1,7 +1,7 @@
 package edu.escuela.gamepz.utils;
 import edu.escuela.gamepz.personajes.*;
 import java.util.Comparator;
-public class ByVida implements Comparator<Personaje>{
+public abstract class ByVida implements Comparator<Personaje>{
 	
 	public int compareTo(Personaje b1, Personaje b2){
 		if (b2.getVida() != b1.getVida()){
@@ -10,6 +10,6 @@ public class ByVida implements Comparator<Personaje>{
 		if (b1.getNombre() != b2.getNombre() ){
 			return (b1.getNombre().compareTo(b2.getNombre()));
 		}
-		return (b1.getVida()<b2.getVida());
+		return (b1.getSize()>b2.getSize()) ? -1 : 1 ;	
 	}
 }

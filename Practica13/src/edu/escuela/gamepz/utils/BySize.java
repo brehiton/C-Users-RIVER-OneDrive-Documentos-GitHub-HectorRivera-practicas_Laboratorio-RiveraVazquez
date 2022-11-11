@@ -1,4 +1,5 @@
 package edu.escuela.gamepz.utils;
-public class BySize{
+import java.util.Comparator;
+public abstract class BySize implements Comparator<Personaje>{
 	
 }

@@ -1,4 +1,4 @@
-//Practica iniciada a las 7:35, practica finalizada 10:16
+//Practica iniciada a las 9:30, practica finalizada 10:16
 package edu.escuela.gamepz.personajes;
 import java.text.DecimalFormat;
 public abstract class Personaje implements Comparable<Personaje>{
@@ -75,5 +75,8 @@ public abstract class Personaje implements Comparable<Personaje>{
 			return this.vida - o.vida;
 		}
 		return (o.size < this.size) ? -1 : 1;
+	}
+	public float getSize(){
+		return size;
 	}
 }
