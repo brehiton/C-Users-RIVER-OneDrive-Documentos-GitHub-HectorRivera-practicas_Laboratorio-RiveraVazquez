@@ -8,6 +8,7 @@ import java.util.TreeSet;
 import java.util.LinkedList;
 import java.util.Collections;
 import java.util.ArrayList;
+import edu.escuela.gamepz.utils.*;
 public class PruebaColeccion{
 	public static void main(String[] args) {
 		Personaje[] datos = {
