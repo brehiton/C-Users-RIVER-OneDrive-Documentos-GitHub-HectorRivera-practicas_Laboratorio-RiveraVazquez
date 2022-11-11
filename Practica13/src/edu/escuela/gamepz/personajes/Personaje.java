@@ -1,7 +1,7 @@
 //Practica iniciada a las 7:35, practica finalizada 10:16
 package edu.escuela.gamepz.personajes;
 import java.text.DecimalFormat;
-public abstract class Personaje {
+public abstract class Personaje implements Comparable<Personaje>{
 
 	private String nombre;
 	protected int vida;
@@ -61,10 +61,19 @@ public abstract class Personaje {
 
 	public abstract void addVida(int vida);
 
-	public int genSize(){
+	public float genSize(){
 		float size = (float) (Math.random()*10);
 		DecimalFormat df = new DecimalFormat("#.00");
 		size = Float.valueOf(df.format(size));
 		return size;
+	}
+	public int compareTo(Personaje o){
+		if (this.nombre.compareTo(o.nombre) != 0){
+			return (this.nombre.compareTo(o.nombre));
+		}
+		if (this.vida != o.vida){
+			return this.vida - o.vida;
+		}
+		return (o.size < this.size) ? -1 : 1;
 	}
 }
