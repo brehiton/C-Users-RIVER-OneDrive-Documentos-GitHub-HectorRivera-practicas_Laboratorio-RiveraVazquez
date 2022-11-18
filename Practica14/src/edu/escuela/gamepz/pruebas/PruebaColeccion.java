@@ -30,11 +30,11 @@ public class PruebaColeccion{
 			System.out.println("El archivo existe: ");
 			//return System.exit(int);//se termina
 		}
-			 
+		// paso 5
 		if (f.isDirectory()) {
 			System.out.println("Si f es un directorio: ");
-		 	//return System.exit(int);// se termina
 			} 
+		 	//return System.exit(int);// se termina
 
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
@@ -76,11 +76,15 @@ public class PruebaColeccion{
 		}
 		
 	} //main
-	private static String guardarDatos(File f,Collection arbol){
-		return f+" "+arbol;
+	// paso 6
+	private static String guardarDatos(Collection arbol){
+		return "";
 	}// metodo1
-	private static File mostrarDirectorio(File f){
-		return f;
+	// paso 7
+	public static void mostrarContenido(File f){
+		for (String tmp: f.list() ) {
+			System.out.println(tmp);
+		}
 	}
 
 }//clase
