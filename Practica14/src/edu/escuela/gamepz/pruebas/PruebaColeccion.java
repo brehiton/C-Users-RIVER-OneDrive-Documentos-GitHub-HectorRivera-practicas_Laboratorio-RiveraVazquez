@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.util.Collection;
-
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.IOException;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -77,11 +79,21 @@ public class PruebaColeccion{
 		
 	} //main
 	// paso 6
-	private static String guardarDatos(Collection arbol){
-		return "";
+	private static void guardarDatos(File f, TreeSet arbol){
+		try{
+			FileOutputStream f = new FileOutputStream("datArbol.ser");
+			ObjectOutputStream s = new ObjectOutputStream(f);
+			for (TreeSet tmp : f ) {
+				System.out.println(tmp);
+			}
+			s.writeObject(d);
+			s.close();
+		} catch (IOException e) {
+			e.printStackTrace ();
+		}
 	}// metodo1
 	// paso 7
-	public static void mostrarContenido(File f){
+	private static void mostrarContenido(File f){
 		for (String tmp: f.list() ) {
 			System.out.println(tmp);
 		}
