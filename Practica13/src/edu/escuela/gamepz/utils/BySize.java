@@ -12,4 +12,5 @@ public abstract class BySize implements Comparator<Personaje>{
 		}
 		return (p2.getVida()>p1.getVida()) ? -1 : 1;
 	}
+	
 }

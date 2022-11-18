@@ -1,6 +1,7 @@
-//Practica iniciada a las 9:30, practica finalizada 10:16
+//Practica iniciada a las 7:35, practica finalizada 10:16
 package edu.escuela.gamepz.personajes;
 import java.text.DecimalFormat;
+
 public abstract class Personaje implements Comparable<Personaje>{
 
 	private String nombre;
@@ -8,21 +9,17 @@ public abstract class Personaje implements Comparable<Personaje>{
 	private float size;
 
 	public Personaje(String nombre, int vida, float size){
-		this.nombre = nombre;
-		this.size = size;
-		setVida(vida);
 		if (size == 0.0f){
 			this.size = genSize();
 		} else {
 			this.size = Math.round(size)/100;
 		}
-
+		this.nombre = nombre;
+		setVida(vida);
 	}
 
 	public Personaje(String personaje){
-		setNombre(personaje);
-		vida = 3;
-		size = 0.0f;
+		this(personaje, 3, 0.0f);
 	}
 
 	public void setNombre(String nombre) {
@@ -50,7 +47,18 @@ public abstract class Personaje implements Comparable<Personaje>{
 		}
 	}
 	public String toString(){
-		return ""+nombre+"\t"+vida;
+		return ""+nombre+"\tV:"+vida+"\tS"+size;
+	}
+
+	public float genSize(){
+		float  size = (float)(Math.random()*10);
+		DecimalFormat df = new DecimalFormat("#.00");
+		size = Float.valueOf(df.format(size));
+		return size;
+	}
+
+	public float getSize(){
+		return size;
 	}
 
 	public abstract void decVida();
@@ -61,22 +69,13 @@ public abstract class Personaje implements Comparable<Personaje>{
 
 	public abstract void addVida(int vida);
 
-	public float genSize(){
-		float size = (float) (Math.random()*10);
-		DecimalFormat df = new DecimalFormat("#.00");
-		size = Float.valueOf(df.format(size));
-		return size;
-	}
-	public int compareTo(Personaje o){
-		if (this.nombre.compareTo(o.nombre) != 0){
-			return (this.nombre.compareTo(o.nombre));
+	public int compareTo(Personaje p){
+		if (this.nombre.compareTo(p.nombre) != 0){
+			return this.nombre.compareTo(p.nombre);
 		}
-		if (this.vida != o.vida){
-			return (this.vida - o.vida);
+		if (this.vida != p.vida){
+			return p.vida - vida;
 		}
-		return (o.size < this.size) ? -1 : 1;
-	}
-	public float getSize(){
-		return size;
+		return (this.size > p.size)?(-1):(1);
 	}
 }
