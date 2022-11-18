@@ -30,13 +30,13 @@ public class PruebaColeccion{
 		File f = new File(path);
 		if (f.exists()) {
 			System.out.println("El archivo existe: ");
-			//return System.exit(int);//se termina
+			System.exit(int);//se termina
 		}
 		// paso 5
 		if (f.isDirectory()) {
 			System.out.println("Si f es un directorio: ");
 			} 
-		 	//return System.exit(int);// se termina
+		 	return System.exit(int);// se termina
 
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
@@ -80,7 +80,8 @@ public class PruebaColeccion{
 	} //main
 	// paso 6
 	private static void guardarDatos(File f, TreeSet arbol){
-		try{
+
+		/*try{
 			FileOutputStream f = new FileOutputStream("datArbol.ser");
 			ObjectOutputStream s = new ObjectOutputStream(f);
 			for (TreeSet tmp : f ) {
@@ -90,7 +91,7 @@ public class PruebaColeccion{
 			s.close();
 		} catch (IOException e) {
 			e.printStackTrace ();
-		}
+		}*/
 	}// metodo1
 	// paso 7
 	private static void mostrarContenido(File f){
