@@ -8,16 +8,34 @@ import java.util.LinkedList;
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
+import java.util.Collection;
 
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
+		// paso 2
 		String path = System.getProperty("user.home");
+		// paso 3
 		Scanner s = new Scanner(System.in); 
+
 		String fname = "";
+		System.out.println("Escribe el nombre del archivo: ");
 		fname = s.nextLine();
 
 		path += s.nextLine();
+		// paso 4
+		File f = new File(path);
+		if (f.exists()) {
+			System.out.println("El archivo existe: ");
+			//return System.exit(int);//se termina
+		}
+			 
+		if (f.isDirectory()) {
+			System.out.println("Si f es un directorio: ");
+		 	//return System.exit(int);// se termina
+			} 
+
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
 			new Planta("Bianca",Tablero.genVida()),
@@ -56,8 +74,13 @@ public class PruebaColeccion{
 		for (Personaje p:arr){
 			System.out.println(p);
 		}
-
 		
-
 	} //main
+	private static String guardarDatos(File f,Collection arbol){
+		return f+" "+arbol;
+	}// metodo1
+	private static File mostrarDirectorio(File f){
+		return f;
+	}
+
 }//clase
