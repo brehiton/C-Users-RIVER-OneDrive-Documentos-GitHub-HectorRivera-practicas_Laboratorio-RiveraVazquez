@@ -18,6 +18,7 @@ public class PruebaColeccion{
 	public static void main(String[] args) {
 		// paso 2
 		String path = System.getProperty("user.home");
+		path += System.getProperty("fie.separator"); 
 		// paso 3
 		Scanner s = new Scanner(System.in); 
 
@@ -26,17 +27,22 @@ public class PruebaColeccion{
 		fname = s.nextLine();
 
 		path += s.nextLine();
+		System.out.println(path);
 		// paso 4
 		File f = new File(path);
 		if (f.exists()) {
-			System.out.println("El archivo existe: ");
-			System.exit(int);//se termina
+			if (f.isDirectory()) {
+			System.out.println("ya existe: ");
+			return;
+			} else{
+				muestraDirectorio(f);
+				System.exit(0);
+
+			}
 		}
 		// paso 5
-		if (f.isDirectory()) {
-			System.out.println("Si f es un directorio: ");
-			} 
-		 	return System.exit(int);// se termina
+		 
+		 	
 
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
@@ -76,22 +82,23 @@ public class PruebaColeccion{
 		for (Personaje p:arr){
 			System.out.println(p);
 		}
+		guardarDatos(File file, TreeSet<Personaje> arbol);
 		
 	} //main
 	// paso 6
-	private static void guardarDatos(File f, TreeSet arbol){
+	private static void guardarDatos(File file, TreeSet<Personaje> arbol){
 
-		/*try{
-			FileOutputStream f = new FileOutputStream("datArbol.ser");
-			ObjectOutputStream s = new ObjectOutputStream(f);
-			for (TreeSet tmp : f ) {
-				System.out.println(tmp);
+		try{
+			FileOutputStream f = new FileOutputStream(file);
+			ObjectOutputStream s = new ObjectOutputStream(arbol);
+			for (TreeSet p : arbol ) {
+				s.writeObject(p);
 			}
-			s.writeObject(d);
+			
 			s.close();
 		} catch (IOException e) {
 			e.printStackTrace ();
-		}*/
+		}
 	}// metodo1
 	// paso 7
 	private static void mostrarContenido(File f){
