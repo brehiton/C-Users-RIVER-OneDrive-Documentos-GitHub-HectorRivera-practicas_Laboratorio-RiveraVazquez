@@ -1,3 +1,7 @@
+package mx.com.hilos.corredores.ventanas;
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.BorderFactory;
 public class Ventana extends JFrame{
 	private JLabel lblTitulo, lblElem1, lblElem2, hElem1, hElem2;
 	private JTextField txtElem1, txtElem2;
@@ -17,7 +21,22 @@ public class Ventana extends JFrame{
 		txtElem1 = new JTextField(3);
 		lblElem2 = new JLabel("Hilo 2");
 		txtElem2 = new JTextField(3);
+		//boton
 		btnStart = new JButton("Comenzar");
+		btnStart.AddActionListener(new ActionListener()){
+			public void actionPerformed(ActionEvent e){
+				if(e.getSource().equals(btnStart)){
+
+				}
+			}
+		}
 		hElem1 = new JLabel("Aqui va el hilo 1");
+		hElem1.setBorder(BorderFactory.createLineBorder(border));
+		hElem1.setPreferredSize(lblDim);
+		hElem2 = new JLabel("Aqui va el hilo 2");
+		hElem2.setBorder(BorderFactory.createLineBorder(border));
+		hElem2.setPreferredSize(lblDim);
+		btnStart.setPreferredSize(lblDim);
+
 	}
 }
