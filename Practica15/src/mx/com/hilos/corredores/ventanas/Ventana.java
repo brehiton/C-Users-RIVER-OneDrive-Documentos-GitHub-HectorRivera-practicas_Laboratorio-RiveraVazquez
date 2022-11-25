@@ -34,6 +34,7 @@ public class Ventana extends JFrame{
 		btnStart.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				btnStart.setEnabled(false);
+				//RunHilos.iniciar()
 			}
 		});
 		hElem1 = new JLabel("Aqui va el hilo 1");
@@ -55,5 +56,6 @@ public class Ventana extends JFrame{
 		add(btnStart);
 		add(hElem1);
 		add(hElem2);
+		setVisible(true);
 	}
 }
