@@ -23,10 +23,10 @@ public class Ventana extends JFrame{
 		txtElem2 = new JTextField(3);
 		//boton
 		btnStart = new JButton("Comenzar");
-		btnStart.AddActionListener(new ActionListener()){
+		btnStart.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				if(e.getSource().equals(btnStart)){
-
+				if(e.getText().equals(btnStart)){
+					
 				}
 			}
 		}
