@@ -2,6 +2,14 @@ package mx.com.hilos.corredores.ventanas;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
+
 public class Ventana extends JFrame{
 	private JLabel lblTitulo, lblElem1, lblElem2, hElem1, hElem2;
 	private JTextField txtElem1, txtElem2;
@@ -25,11 +33,9 @@ public class Ventana extends JFrame{
 		btnStart = new JButton("Comenzar");
 		btnStart.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				if(e.getText().equals(btnStart)){
-					
-				}
+				btnStart.setEnabled(false);
 			}
-		}
+		});
 		hElem1 = new JLabel("Aqui va el hilo 1");
 		hElem1.setBorder(BorderFactory.createLineBorder(border));
 		hElem1.setPreferredSize(lblDim);
@@ -38,5 +44,16 @@ public class Ventana extends JFrame{
 		hElem2.setPreferredSize(lblDim);
 		btnStart.setPreferredSize(lblDim);
 
+		setTitle("Practica 15");
+		setLayout(new FlowLayout());
+		setSize(ancho,alto);
+		add(lblTitulo);
+		add(lblElem1);
+		add(txtElem1);
+		add(lblElem2);
+		add(txtElem2);
+		add(btnStart);
+		add(hElem1);
+		add(hElem2);
 	}
 }
