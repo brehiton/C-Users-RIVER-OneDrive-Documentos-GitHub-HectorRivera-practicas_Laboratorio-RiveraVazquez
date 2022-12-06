@@ -20,7 +20,6 @@ public class Letra implements Runnable{
 
 			}
 		}
-		cadena += "Finalizacion";
-		etq.setText(cadena);
+		etq.setText(cadena+"Finalizado");
 	}
 }
