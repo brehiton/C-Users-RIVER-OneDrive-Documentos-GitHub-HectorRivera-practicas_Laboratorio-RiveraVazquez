@@ -1,4 +1,18 @@
-public class Ventana{
+package ex.ordinario.eval.ventanas;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JMenuItem;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class Ventana extends JFrame{
 
 	public Ventana(){
 		initComponents();
@@ -6,7 +20,9 @@ public class Ventana{
 
 	private void initComponents(){
 		//establecer el tipo de frame como FlowLayout
+		this.setLayout(new FlowLayout());
 		//establecer que la ventana se cierre regresando el pormp de la consola
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mb = new JMenuBar();
 		//establecer el menu en la Ventana
 		menu = new JMenu("Ordenar por ...");
@@ -19,6 +35,11 @@ public class Ventana{
 
 		miModelo = new JMenuItem("Modelo");
 		//asignar una clase anónima en el clic miModelo
+		miModelo.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+
+			}
+		});
 		//la accion manda llamar al método sortModelo(txContenido) de la clase Procesos
 		menu.add(miModelo);
 
@@ -76,6 +97,7 @@ public class Ventana{
 		txContenido = new JTextArea(30,40);
 		add(txContenido);
 		setSize(550,650);
+		setVisible(true);
 	}
 	
 	JMenuBar mb;

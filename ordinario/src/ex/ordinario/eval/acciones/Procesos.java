@@ -8,7 +8,10 @@ public class Procesos{
 	private Procesos(){}
 
 	private void llenaTxArea(JTextArea txContenido){
-		txContenido = " ";
+		String txContenido = " ";
+	}
+	for (int i = 0; ; ) {
+		
 	}
 
 	public void addTerrestre(JTextArea txContenido, JTextField marca, JTextField modelo,
