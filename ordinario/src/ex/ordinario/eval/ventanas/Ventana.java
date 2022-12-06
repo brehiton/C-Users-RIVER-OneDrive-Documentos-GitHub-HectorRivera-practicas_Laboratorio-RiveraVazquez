@@ -30,6 +30,11 @@ public class Ventana extends JFrame{
 
 		miMarca = new JMenuItem("Marca");
 		//asignar una clase anónima en el clic miMarca
+		miMarca.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+
+			}
+		});
 		//la accion manda llamar al método sortMarca(txContenido) de la clase Procesos
 		menu.add(miMarca);
 
@@ -45,6 +50,11 @@ public class Ventana extends JFrame{
 
 		miCosto = new JMenuItem("Costo");
 		//asignar una clase anónima en el clic miCosto
+		miCosto.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+
+			}
+		});
 		//la accion manda llamar al método sortCosto(txContenido) de la clase Procesos
 		menu.add(miCosto);
 
@@ -52,6 +62,11 @@ public class Ventana extends JFrame{
 
 		miSalir = new JMenuItem("Salir");
 		//asignar una clase anónima en el clic miSalir
+		miSalir.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+
+			}
+		});
 		//la accion manda llamar al método dispose()
 		menu.add(miSalir);
 		
@@ -83,6 +98,11 @@ public class Ventana extends JFrame{
 
 		addTerr = new JButton("Agregar Terrestre");
 		//asignar una clase anónima en el clic addTerr
+		addTerr.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+
+			}
+		});
 		//la accion manda llamar al método 
 		// addTerrestre(txContenido, txMarca, txModelo, txCosto, txLlantas)
 		// de la clase Procesos
@@ -90,6 +110,11 @@ public class Ventana extends JFrame{
 
 		addAqua = new JButton("Agregar Acuatico");
 		//asignar una clase anónima en el clic addAqua
+		addAqua.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+
+			}
+		});
 		//la accion manda llamar al método 
 		// addAcuatico(txContenido, txMarca, txModelo, txCosto, txRemos)
 		// de la clase Procesos

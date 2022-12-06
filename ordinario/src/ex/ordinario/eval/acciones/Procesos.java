@@ -8,14 +8,12 @@ public class Procesos{
 	private Procesos(){}
 
 	private void llenaTxArea(JTextArea txContenido){
-		String txContenido = " ";
-	}
-	for (int i = 0; ; ) {
-		
+		txContenido = " ";
 	}
 
 	public void addTerrestre(JTextArea txContenido, JTextField marca, JTextField modelo,
 		JTextField costo, JTextField llantas){
+
 	}
 
 	public void addAcuatico(JTextArea txContenido, JTextField marca, JTextField modelo,
