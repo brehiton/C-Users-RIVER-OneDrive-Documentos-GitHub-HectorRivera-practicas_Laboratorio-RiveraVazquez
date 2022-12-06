@@ -8,7 +8,7 @@ public class PorModelo implements Comparator<Vehiculo>{
 			return (v2.getModelo()>v1.getModelo())?(1):(-1);
 		}
 		if (v1.getMarca().compareTo(v2.getMarca()) != 0){
-			return (v1.getMarca().compareTo(v1.getMarca()));
+			return (v1.getMarca().compareTo(v2.getMarca()));
 		}
 		return (v2.getCosto()>v1.getCosto())?(1):(-1);
 	}

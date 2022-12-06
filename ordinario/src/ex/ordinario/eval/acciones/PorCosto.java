@@ -9,6 +9,6 @@ public class PorCosto implements Comparator<Vehiculo>{
 		if (v1.getModelo() != v2.getModelo()){
 			return (v2.getModelo()>v1.getModelo())?(1):(-1);
 		}
-		return (v1.getMarca().compareTo(v1.getMarca()));
+		return (v1.getMarca().compareTo(v2.getMarca()));
 	}
 }
